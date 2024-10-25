@@ -4,12 +4,15 @@
   "description": "playwright java automation",
   "main": "index.js",
   "scripts": {
-    "test":"playwright test --headed"
+    "test": "playwright test --headed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.48.1"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }

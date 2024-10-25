@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export class RegisterPage {
     constructor(page) {
         this.page = page
@@ -8,16 +10,15 @@ export class RegisterPage {
     }
 
     signUpAsNewUser = async () => {
-        await this.page.pause()
-        // type into email input
         await this.emailInput.waitFor()
-        await this.emailInput.fill("testymctesterson@testers.com")
-        // type into password input
-        await this.passwordInput.waitFor()
-        await this.passwordInput.fill("supersecretpassword")
-        // click register button
+        const emailId = uuidv4()
+        const email = emailId + '@gmail.com'
+        await this.emailInput.fill(email)
+        await this.emailInput.waitFor()
+        const password = uuidv4()
+        await this.emailInput.fill(password)
+
         await this.registerButton.waitFor()
         await this.registerButton.click()
-        await this.page.pause()
     }
 }
