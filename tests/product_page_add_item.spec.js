@@ -18,5 +18,4 @@ test("Playwright Page Add To Basket", async ({ page }) => {
     const checkoutLink = page.getByRole('link', { name: 'Checkout' })
     await checkoutLink.waitFor()
     await checkoutLink.click()
-    await page.waitForURL("/basket"
 })
