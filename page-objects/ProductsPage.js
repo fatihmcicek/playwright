@@ -8,8 +8,6 @@ export class ProductsPage {
         this.addButtons = page.locator('[data-qa="product-button"]')
         this.sortDropdown = page.locator('[data-qa="sort-dropdown"]')
         this.productTitle = page.locator('[data-qa="product-title"]')
-
-
     }
 
     visit = async () => {
@@ -39,5 +37,4 @@ export class ProductsPage {
         expect(productTitlesAfterSorting).not.toEqual(productTitlesBeforeSorting)
     }
 
-    
 }
