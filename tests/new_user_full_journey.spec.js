@@ -1,10 +1,12 @@
 import { test } from "@playwright/test"
+import { v4 as uuidv4 } from "uuid"
 import { ProductsPage } from "../page-objects/ProductsPage.js"
 import { Navigation } from "./../page-objects/Navigation.js"
 import { Checkout } from "./../page-objects/Checkout.js"
 import { LoginPage } from "./../page-objects/LoginPage.js"
 import { RegisterPage } from "./../page-objects/RegisterPage.js"
-
+import { DeliveryDetails } from "./../page-objects/DeliveryDetails.js"
+import { deliveryDetails as userAddress } from "./../data/deliveryDetails.js"
 
 
 test.only("New user full end-to-end test journey", async ({ page }) => {
@@ -23,5 +25,11 @@ test.only("New user full end-to-end test journey", async ({ page }) => {
     await login.moveToSignup()
 
     const registerPage = new RegisterPage(page)
-    await registerPage.signUpAsNewUser()
+    const email = uuidv4() + "@gmail.com"
+    const password = uuidv4()
+    await registerPage.signUpAsNewUser(email, password)
+
+    const deliveryDetails = new DeliveryDetails(page)
+    await deliveryDetails.fillDetails(userAddress)
+    
 })
