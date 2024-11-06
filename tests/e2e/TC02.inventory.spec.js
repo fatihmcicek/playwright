@@ -11,20 +11,16 @@ test.describe('TC02 - Inventory Management Tests', () => {
         loginPage = new LoginPage(page);
         inventoryPage = new InventoryPage(page);
         
-        // Login process
         await loginPage.goto();
         await loginPage.login(testData.validUser.username, testData.validUser.password);
         
-        // Ensure we're on inventory page and it's loaded
         await page.waitForURL('**/inventory.html');
         await inventoryPage.waitForPageLoad();
     });
 
     test('TC02.01 - Product sorting functionality', async () => {
-        // Starting point verification
         await inventoryPage.waitForPageLoad();
-        
-        // A to Z sorting
+
         await test.step('Sort A to Z', async () => {
             await inventoryPage.sortProducts('az');
             const namesAZ = await inventoryPage.getItemNames();
@@ -32,7 +28,6 @@ test.describe('TC02 - Inventory Management Tests', () => {
             expect(namesAZ).toEqual(sortedNamesAZ);
         });
 
-        // Z to A sorting
         await test.step('Sort Z to A', async () => {
             await inventoryPage.sortProducts('za');
             const namesZA = await inventoryPage.getItemNames();
@@ -40,7 +35,6 @@ test.describe('TC02 - Inventory Management Tests', () => {
             expect(namesZA).toEqual(sortedNamesZA);
         });
 
-        // Price low to high
         await test.step('Sort price low to high', async () => {
             await inventoryPage.sortProducts('lohi');
             const prices = await inventoryPage.getItemPrices();
@@ -48,7 +42,6 @@ test.describe('TC02 - Inventory Management Tests', () => {
             expect(prices).toEqual(sortedPrices);
         });
 
-        // Price high to low
         await test.step('Sort price high to low', async () => {
             await inventoryPage.sortProducts('hilo');
             const prices = await inventoryPage.getItemPrices();
