@@ -9,7 +9,10 @@ module.exports = defineConfig({
   fullyParallel: false,
   retries: 1,
   workers: 1,
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['json', { outputFile: 'test-results/test-report.json' }]
+  ],
   use: {
     baseURL: 'https://www.saucedemo.com',
     trace: 'retain-on-failure',
@@ -21,11 +24,20 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { browserName: 'chromium' },
+      use: { browserName: 'chromium' }
     },
     {
       name: 'firefox',
-      use: { browserName: 'firefox' },
+      use: { browserName: 'firefox' }
+    },
+    {
+      name: 'performance',
+      testMatch: /.*\.perf\.spec\.js/,
+      use: { 
+        browserName: 'chromium',
+        actionTimeout: 30000,
+        navigationTimeout: 30000
+      }
     }
   ],
 });
