@@ -8,23 +8,23 @@ This project contains the automated test suite for the [SauceDemo](https://www.s
 
 ```
 my-playwright-project/
-├── node_modules/            # Project dependencies
-├── pages/                   # Page Object Models
-│   ├── LoginPage.js        # Login page operations
-│   ├── InventoryPage.js    # Product list operations
-│   ├── CartPage.js         # Cart operations
-│   ├── CheckoutPage.js     # Payment operations
-│   ├── UserProfilePage.js  # User profile operations
-│   ├── OrderPage.js        # Order operations
-│   └── PerformancePage.js  # Performance measurement operations
-├── playwright-report/       # HTML test reports
-│   └── index.html          # Main report file
-├── test-results/           # Test execution artifacts
-│   ├── screenshots/        # Failed test screenshots
-│   ├── videos/            # Test execution recordings
-│   └── traces/            # Playwright trace files
+├── node_modules/            
+├── pages/                   
+│   ├── LoginPage.js        
+│   ├── InventoryPage.js    
+│   ├── CartPage.js         
+│   ├── CheckoutPage.js     
+│   ├── UserProfilePage.js  
+│   ├── OrderPage.js        
+│   └── PerformancePage.js  
+├── playwright-report/       
+│   └── index.html          
+├── test-results/           
+│   ├── screenshots/        
+│   ├── videos/            
+│   └── traces/            
 ├── tests/
-│   ├── e2e/               # E2E test scenarios
+│   ├── e2e/               
 │   │   ├── TC01.auth.spec.js
 │   │   ├── TC02.inventory.spec.js
 │   │   ├── TC03.cart.spec.js
@@ -33,9 +33,9 @@ my-playwright-project/
 │   │   ├── TC06.profile.spec.js
 │   │   ├── TC07.order.spec.js
 │   │   └── TC08.performance.spec.js
-│   ├── fixtures/          # Test data
+│   ├── fixtures/          
 │   │   └── test-data.json
-│   └── manual-test-cases/ # Manual test documentation
+│   └── manual-test-cases/ 
 │       ├── TC01-authentication.md
 │       ├── TC02-inventory-management.md
 │       ├── TC03-cart-operations.md
@@ -44,14 +44,14 @@ my-playwright-project/
 │       ├── TC06-user-profile.md
 │       ├── TC07-order-history.md
 │       └── TC08-performance.md
-├── utils/                 # Utility functions and helpers
-│   ├── test-helpers.js   # Common test helper functions
-│   └── test-constants.js # Test constants and configurations
-├── .gitignore            # Git ignore configurations
-├── package.json          # Project dependencies and scripts
-├── package-lock.json     # Locked dependency versions
-├── playwright.config.js  # Playwright configuration
-└── README.md            # Project documentation
+├── utils/                 
+│   ├── test-helpers.js   
+│   └── test-constants.js 
+├── .gitignore            
+├── package.json          
+├── package-lock.json     
+├── playwright.config.js  
+└── README.md            
 ```
 
 ## 🔧 Installation
