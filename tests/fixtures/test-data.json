@@ -1,0 +1,16 @@
+{
+    "validUser": {
+        "username": "standard_user",
+        "password": "secret_sauce"
+    },
+    "checkoutInfo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "postalCode": "12345"
+    },
+    "products": {
+        "backpack": 0,
+        "bikeLight": 1,
+        "boltTshirt": 2
+    }
+}
