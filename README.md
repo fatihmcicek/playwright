@@ -2,7 +2,7 @@
 
 This project contains the automated test suite for the [SauceDemo](https://www.saucedemo.com/) e-commerce web application. It is developed using Playwright and JavaScript.
 
-![Report Screenshot](test-results/report.png)
+![Report Screenshot](/utils/report.png)
 
 ## 🚀 Project Structure
 
@@ -59,8 +59,8 @@ my-playwright-project/
 1. Install Node.js (v14 or higher)
 2. Clone the project:
 ```bash
-git clone [repository-url]
-cd my-playwright-project
+git clone https://github.com/fatihmcicek/playwright-test-project.git
+cd playwright-test-project
 ```
 
 3. Install dependencies:
